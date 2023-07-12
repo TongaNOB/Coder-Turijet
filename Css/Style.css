@@ -53,8 +53,8 @@ ul {
     margin-top: 50px;
     justify-items: center;
     flex-wrap: wrap;
-    /* align-items: center; */
-}
+    
+git}
 
 #grilla2{
     display: grid;
@@ -65,10 +65,18 @@ ul {
     margin-top: 50px;
     justify-items: center;
     flex-wrap: wrap;
-    /* align-items: center; */
-}
+    }
 
-
+    #grilla3{
+        display: grid;
+        grid-template-rows: 600px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 6rem;
+        margin-top: 50px;
+        justify-items: center;
+        flex-wrap: wrap;
+        }
 
 .img-thumbnail:hover{
     width: 65%;
