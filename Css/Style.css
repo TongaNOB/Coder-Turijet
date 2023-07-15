@@ -2,10 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Roboto+Slab:wght@300;400;500&display=swap');
 
-/* @media only screen and (max-width: 700px){
-
+@media only screen and (max-width: 500px){
+    
+    #grilla3{
+        display: flex !important;
+        grid-template-rows: repeat(6, 100px) !important;
+        }
+        .grilla3_items{
+            padding: 30px;        
+        }
+   
+        #grilla{
+            grid-template-rows: repeat(3,100px);
+                }
+   
     }
-} */
+
+
+   
 
 *{
     margin: 0;
@@ -77,6 +91,7 @@ ul {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         row-gap: 6rem;
+        column-gap: 6rem;
         margin-top: 50px;
         justify-items: center;
         flex-wrap: wrap;
@@ -113,10 +128,10 @@ ul {
     width: 65%;
 }
 
-.parrarec {
+/* .parrarec {
     font-family: 'Caveat', cursive;
     font-size: 30px;
-}
+} */
 
 h1{
     text-align: center;
