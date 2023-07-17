@@ -2,25 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Roboto+Slab:wght@300;400;500&display=swap');
 
-@media only screen and (max-width: 500px){
-    
-    #grilla3{
-        display: flex !important;
-        grid-template-rows: repeat(6, 100px) !important;
-        }
-        .grilla3_items{
-            padding: 30px;        
-        }
-   
-        #grilla{
-            grid-template-rows: repeat(3,100px);
-                }
-   
-    }
-
-
-   
-
 *{
     margin: 0;
     padding: 0;
@@ -29,7 +10,6 @@
 
 html{
     font-size: 62.5%;
-
 }
 
 .nav-item a{
@@ -65,39 +45,106 @@ ul {
     margin: 0px;
 } */
 
-#grilla{
+.grilla{
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 50px;
+    margin-bottom: 50px;
+    column-gap: 2rem;
+    row-gap: 10rem;
     justify-items: center;
     justify-content: center;
-    /* flex-wrap: wrap; */
-    
+    grid-template-areas: 
+        'fotoind1 fotoind2 fotoind3';
     }
 
-#grilla2{
+#fotoind1{
+    grid-area: fotoind1;
+}
+#fotoind2{
+    grid-area: fotoind2;
+}
+#fotoind3{
+    grid-area: fotoind3;
+}
+
+.img-thumbnail{
+    padding: 10%;
+}
+
+.img-thumbnail:hover{
+    width: 86%;
+}
+
+
+.grilla2{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     row-gap: 2rem;
     margin-top: 20px;
     justify-items: center;
-    /* flex-wrap: wrap; */
-    }
+    grid-template-areas: 
+        'card1 card2 card3'
+        'card4 card5 card6';
+}
 
-    #grilla3{
+#card1{
+    grid-area: card1;
+}
+#card2{
+    grid-area: card2;
+}
+#card3{
+    grid-area: card3;
+}
+#card4{
+    grid-area: card4;
+}
+#card5{
+    grid-area: card5;
+}
+#card6{
+    grid-area: card6;
+}
+
+
+    .grilla3{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        row-gap: 6rem;
-        column-gap: 6rem;
-        margin-top: 50px;
-        justify-items: center;
-        flex-wrap: wrap;
-        }
+        grid-template-rows: 100px, 100px;
+        grid-template-columns: 1fr, 1fr, 1fr;
+        grid-template-areas: 
+        'foto1 foto2 foto3'
+        'foto4 foto5 foto6';
+        
+    }
+    
+    .grilla3_items{
+        padding: 10%;
+    }
+    
+    #foto1{
+        grid-area: foto1;
+    }
+    #foto2{
+        grid-area: foto2;
+    }
+    #foto3{
+        grid-area: foto3;
+    }
+    #foto4{
+        grid-area: foto4;
+    }
+    #foto5{
+        grid-area: foto5;
+    }
+    #foto6{
+        grid-area: foto6;
+    }
+    
 
-        #grilla4{
+        .grilla4{
             display: grid;
             border: 50%;
             grid-template-columns: 1fr 1fr;
@@ -105,33 +152,52 @@ ul {
             row-gap: 6rem;
             margin-top: 50px;
             justify-items: center;
-            flex-wrap: wrap;
-            }
+            grid-template-areas: 
+                'grilla4_1 grilla4_2'
+                'grilla4_3 grilla4_4';
+        }
+
+.grilla4_1{
+    grid-area: grilla4_1;
+}
+.grilla4_2{
+    grid-area: grilla4_2;
+}
+.grilla4_3{
+    grid-area: grilla4_3;
+}
+.grilla4_4{
+    grid-area: grilla4_4;
+}
+
 
 .tubegps{
     display: grid;
     row-gap: 2rem;
-    column-gap: 20px;
+    column-gap: 2rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    
+    grid-template-areas:'tubegps1 tubegps1'
+                        'tubegps2 tubegps3'
+                        'tubegps4';    
 }
+
 .tubegps1{
-    grid-column: 1/3;
+    grid-area: tubegps1;
     padding: 2rem 5rem;
 }
+.tubegps2{
+    grid-area: tubegps2;
+}
+.tubegps3{
+    grid-area: tubegps3;
+}
+
 .tubegps4{
+    grid-area: tubegps4;
     padding-left: 5rem;
     padding-top: 5rem;
 }
-.img-thumbnail:hover{
-    width: 65%;
-}
-
-/* .parrarec {
-    font-family: 'Caveat', cursive;
-    font-size: 30px;
-} */
 
 h1{
     text-align: center;
@@ -161,5 +227,58 @@ footer {
     align-content: center;
     gap: 10em;
     flex-wrap: wrap;
+}
+@media screen and (max-width: 700px){
+    .grilla3{
+        grid-template-rows: repeat(6, auto);
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'foto1'
+        'foto2'
+        'foto3'
+        'foto4'
+        'foto5'
+        'foto6';        
+    }
+    .grilla{
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'fotoind1'
+        'fotoind2'
+        'fotoind3';        
+    }
+
+    .grilla2{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6 1fr);
+        grid-template-areas: 
+            'card1'
+            'card2'
+            'card3'
+            'card4'
+            'card5' 
+            'card6';
+            }
+            .grilla4{
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(4 1fr);
+                grid-template-areas: 
+                    'grilla4_1'
+                    'grilla4_2'
+                    'grilla4_3'
+                    'grilla4_4';
+        }
+
+        .tubegps{
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4 1fr);
+            grid-template-areas: 
+                'tubegps1'
+                'tubegps2'
+                'tubegps3' 
+                'tubegps4';
+        }
+
 }
 
